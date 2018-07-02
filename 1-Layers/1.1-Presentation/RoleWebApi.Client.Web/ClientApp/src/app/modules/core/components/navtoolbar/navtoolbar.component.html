@@ -1,0 +1,19 @@
+<div class="welcome-username">Welcome, {{username}}</div>
+<mat-toolbar class="navtoolbar">
+  <h1>Clients</h1>
+  <span class="fill-remaining-space"></span>
+  <div class="item-menu">
+    <div style="float: left; padding-left: 20px;">
+      <button mat-button [routerLink]="['/policy/list/']"
+              matTooltip="Clients">
+        <mat-icon class="toolbar-pad-right-7">apps</mat-icon>
+        <span class="hide-button-toolbar">Clients</span>
+      </button>
+    </div>
+  </div>
+  <span class="fill-remaining-space"></span>
+  <mat-icon class="navtoolbar-icon navtoolbar-icon-exit-to-app"
+            matTooltip="Exit"
+            [matTooltipPosition]="position.value"
+            (click)="logout()">exit_to_app</mat-icon>
+</mat-toolbar>

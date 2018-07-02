@@ -1,0 +1,145 @@
+@import "../../../../shared/styles/_vars.scss";
+@import "../../../../shared/styles/style.scss";
+@import "../../../../shared/styles/table.scss";
+@import "../../../../shared/styles/button.scss";
+
+.welcome-username {
+  font-family: MuseoSans700;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  color: $color-letra;
+  float: right;
+  padding-right: 30px;
+  height: 20px;
+}
+
+.navtoolbar {
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0;
+  background: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.navtoolbar h1 {
+  font-family: MuseoSans700;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: $color-letra;
+}
+
+.item-menu a {
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  line-height: 15px;
+  cursor: pointer;
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  white-space: normal;
+}
+
+.item-menu span {
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  line-height: 15px;
+  cursor: pointer;
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  white-space: normal;
+}
+
+.item-menu a:hover,
+.item-menu a:focus,
+.item-menu a:active {
+  color: #1c146b;
+}
+
+.item-menu div {
+  text-align: center;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.navtoolbar-icon {
+  color: #566775;
+  cursor: pointer;
+}
+
+.navtoolbar-icon-exit-to-app {
+  margin-left: 25px;
+}
+
+.toolbar-pad-right-7 {
+  padding-right: 7px;
+}
+
+.sub-menu {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+::ng-deep .mat-menu-panel.menu-protocol {
+  max-width: none;
+  max-height: 400px;
+}
+
+.list-column-component {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+}
+
+.button-edit-protocol {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+}
+
+.notifications-loading-shade {
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.protocol-toolbar {
+  padding: 0;
+  margin: 0;
+  background: none;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1240px) {
+
+  .item-menu div {
+    width: 65px;
+    text-align: center;
+  }
+
+  .hide-button-toolbar {
+    display: none !important;
+  }
+
+  .toolbar-pad-right-7 {
+    padding-right: inherit;
+  }
+}

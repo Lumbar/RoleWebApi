@@ -1,0 +1,27 @@
+@import "../../../../../../shared/styles/style.scss";
+@import "../../../../../../shared/styles/table.scss";
+
+.policy-list-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+  background-color: #668CAA;
+  color: white;
+}
+
+.filter-header {
+  color: white;
+}
+
+/*/deep/ .mat-input-underline {
+  border-bottom: 1px solid white !important;
+}
+
+/deep/ .mat-form-field-underline {
+  background-color: transparent;
+}*/
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+  color: white;
+}

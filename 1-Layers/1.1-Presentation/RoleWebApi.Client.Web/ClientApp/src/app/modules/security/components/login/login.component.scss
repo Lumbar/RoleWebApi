@@ -1,0 +1,70 @@
+@import "../../../../shared/styles/style.scss";
+
+.datos-form {
+  background-color: rgba(250,250,250,0.5);
+  width: 100%;
+  height: 66vh;
+  padding-top: 200px;
+  //background-image: url('../../../../../assets/img/bg-body.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40px 220px;
+}
+
+.datos-form h4 {
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+
+.form-contenido {
+  margin: auto;
+  width: 30%;
+  opacity: 05;
+}
+
+.form-contenido .mui-form legend {
+  color: #180C6D;
+  font-weight: 500;
+}
+
+.mui-panel {
+  margin: auto;
+  text-align: left !important;
+  padding: 35px !important;
+}
+
+.btn-enviar {
+  text-align: center;
+  color: #FFF;
+  background: #2196F3;
+  top: 80px;
+  left: 45%;
+  font-weight: bold;
+}
+
+.mui-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #1c146b;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.login-column-icon {
+  width: 10%;
+}
+
+.login-column-text {
+  width: 90%;
+}
+
+
+@media (max-width: 1250px) {
+  .login-column-icon {
+    width: inherit;
+  }
+}

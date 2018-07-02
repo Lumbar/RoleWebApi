@@ -1,0 +1,43 @@
+@import "_vars.scss";
+
+.mat-table {
+  overflow: auto;
+}
+
+.mat-column-select {
+  overflow: visible;
+}
+
+
+.mat-header-row {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.highlight {
+  background: #42A948; /* green */
+}
+
+table {
+  width: 100%;
+}
+
+.mat-cell {
+  font-size: $tamanio-letra;
+}
+/*
+.mat-table .mat-row:hover {
+  cursor: pointer;
+  background-color: rgba(63,81,181,0.2);
+}
+*/
+
+.tabla-header-flex-none {
+  flex: none;
+}
+
+.tabla-row-flex-none {
+  flex: none;
+}

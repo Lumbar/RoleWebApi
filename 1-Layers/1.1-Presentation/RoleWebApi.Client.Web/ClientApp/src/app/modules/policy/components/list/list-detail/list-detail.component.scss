@@ -1,0 +1,8 @@
+@import "../../../../../shared/styles/style.scss";
+@import "../../../../../shared/styles/table.scss";
+
+.policy-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}

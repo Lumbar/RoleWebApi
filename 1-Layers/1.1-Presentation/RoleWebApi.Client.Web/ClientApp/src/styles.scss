@@ -1,0 +1,52 @@
+$color-letra: #1c146b;
+$color-filtro: #668CAA;
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@import 'font-app.scss';
+
+// Includes all app palettes
+@import 'custom-palette-app.scss';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+$iron-app-primary: mat-palette($md-purple);
+$iron-app-accent: mat-palette($md-green);
+
+// The warn palette is optional (defaults to purple light).
+$iron-app-warn: mat-palette($md-yellow);
+
+// Especifica el color de textos e iconos
+$iron-app-icon: mat-palette($md-bluedark);
+$iron-app-text: mat-palette($md-dark);
+
+// Create the theme object (a Sass map containing all of the palettes).
+//$iron-app-theme: mat-light-theme($iron-app-primary, $iron-app-accent, $iron-app-warn);
+$iron-app-theme: mat-light-theme($iron-app-primary, $iron-app-accent);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($iron-app-theme);
+
+html {
+  margin: 0px;
+  padding: 20px;
+}
+
+body {
+  background-color: #bccfde;
+  background-repeat: no-repeat;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  font-family: MuseoSans300;
+  font-weight: 300;
+  font-style: normal;
+}

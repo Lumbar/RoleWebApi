@@ -1,0 +1,39 @@
+<div class="policy-list-header">
+  <div class="row" #rowFilter>
+    <div class="list-header-component column-5">
+    </div>
+    <div class="list-header-component column-25">
+      <div class="pad-LR-10">
+        <mat-form-field>
+          <mat-label class="filter-header">Id</mat-label>
+          <input matInput (keyup)="keyUp.emit($event)" [(ngModel)]="ClientListFilterVM.Id" #autofocus>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="list-header-component column-30">
+      <div class="pad-LR-10">
+        <mat-form-field>
+          <mat-label class="filter-header">Name</mat-label>
+          <input matInput (keyup)="keyUp.emit($event)" [(ngModel)]="ClientListFilterVM.Name">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="list-header-component column-25">
+      <div class="pad-LR-10">
+        <mat-form-field>
+          <mat-label class="filter-header">Email</mat-label>
+          <input matInput (keyup)="keyUp.emit($event)" [(ngModel)]="ClientListFilterVM.Email">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="list-header-component column-15">
+      <div class="pad-LR-10">
+        <mat-form-field>
+          <mat-label class="filter-header">Role</mat-label>
+          <input matInput (keyup)="keyUp.emit($event)" [(ngModel)]="ClientListFilterVM.Role">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="list-header-pad"></div>
+</div>

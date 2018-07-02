@@ -1,0 +1,44 @@
+@import "../../../../../../shared/styles/_vars.scss";
+@import "../../../../../../shared/styles/style.scss";
+@import "../../../../../../shared/styles/card.scss";
+@import "../../../../../../shared/styles/icon.scss";
+@import "../../../../../../shared/styles/table.scss";
+@import "../../../../../../shared/styles/button.scss";
+
+
+.policy-list {
+  padding-right: 24px;
+}
+
+.policy-list-card {
+  min-width: 676px;
+}
+
+.policy-list-card-header {
+}
+
+
+.policy-list-card-content {
+}
+
+.policy-list-table {
+}
+
+.policy-list-title {
+}
+
+.policy-list--spacer {
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

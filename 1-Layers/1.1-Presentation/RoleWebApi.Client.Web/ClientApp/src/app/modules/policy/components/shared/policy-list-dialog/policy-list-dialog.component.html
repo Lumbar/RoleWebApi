@@ -1,0 +1,14 @@
+<div class="policy-list-dialog" #container (keyup)="onKeyup($event)">
+  <div mat-dialog-title mat-dialog-draggable-title cachePosition="false">
+    Policies
+  </div>
+  <mat-dialog-content class="policy-list-dialog-content" #content>
+    <pol-policy-list [PolicyListVM]="PolicyListVM"
+                  [Height]="548"
+                  [Width]="950">
+    </pol-policy-list>
+  </mat-dialog-content>
+  <div class="policy-list-actions">
+    <button mat-raised-button color="accent" class="marginLR-10" (click)="CancelViewList()">Cancel</button>
+  </div>
+</div>

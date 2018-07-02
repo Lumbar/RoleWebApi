@@ -1,0 +1,11 @@
+<div #policyContainer class="policy-container mat-elevation-z4 collection-list-body">
+  <pol-policy-list-filter [ClientListFilterVM]="ClientListVM.ClientListFilterVM"
+                             (keyUp)="keyUp($event)">
+  </pol-policy-list-filter>
+  <pol-policy-list-collection [ClientListCollectionsVM]="ClientListVM.ClientListCollectionsVM"
+                              [ClientListPaginationVM]="ClientListVM.ClientListPaginationVM"
+                              [ClientListDetailVM]="ClientListVM.ClientListDetailVM"
+                              (visualize)="visualize.emit($event)"
+                              (paginateTable)="paginateTable()">
+  </pol-policy-list-collection>
+</div>

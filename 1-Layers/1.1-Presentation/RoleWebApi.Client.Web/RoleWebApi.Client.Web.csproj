@@ -1,0 +1,200 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\agents\core\base-response-dto.ts" />
+    <None Remove="ClientApp\src\app\agents\core\base-response.ts" />
+    <None Remove="ClientApp\src\app\agents\networkmanager\auth-interceptor.ts" />
+    <None Remove="ClientApp\src\app\agents\networkmanager\index.ts" />
+    <None Remove="ClientApp\src\app\agents\networkmanager\network-manager.ts" />
+    <None Remove="ClientApp\src\app\agents\networkmanager\post-parameters.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\path-operation.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\policy-agent.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\request\index.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\request\list-clients-request.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\request\list-policies-by-client-id-request.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\response\index.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\response\list-clients-response.ts" />
+    <None Remove="ClientApp\src\app\agents\policy\response\list-policies-by-client-id-response.ts" />
+    <None Remove="ClientApp\src\app\agents\security\path-operation.ts" />
+    <None Remove="ClientApp\src\app\agents\security\request\connect-token-request.ts" />
+    <None Remove="ClientApp\src\app\agents\security\request\index.ts" />
+    <None Remove="ClientApp\src\app\agents\security\response\connect-token-response.ts" />
+    <None Remove="ClientApp\src\app\agents\security\response\index.ts" />
+    <None Remove="ClientApp\src\app\agents\security\security-agent.ts" />
+    <None Remove="ClientApp\src\app\index.ts" />
+    <None Remove="ClientApp\src\app\models\adapters\client-adapter.ts" />
+    <None Remove="ClientApp\src\app\models\adapters\policy-adapter.ts" />
+    <None Remove="ClientApp\src\app\models\dtos\client-paged-list.ts" />
+    <None Remove="ClientApp\src\app\models\dtos\client.ts" />
+    <None Remove="ClientApp\src\app\models\dtos\index.ts" />
+    <None Remove="ClientApp\src\app\models\dtos\policy.ts" />
+    <None Remove="ClientApp\src\app\models\models\user.model.ts" />
+    <None Remove="ClientApp\src\app\modules\core\components\layout\layout.component.ts" />
+    <None Remove="ClientApp\src\app\modules\core\components\navtoolbar\navtoolbar.component.ts" />
+    <None Remove="ClientApp\src\app\modules\core\components\viewport.ts" />
+    <None Remove="ClientApp\src\app\modules\core\containers\app.ts" />
+    <None Remove="ClientApp\src\app\modules\core\core.module.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\list\list-detail\index.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\list\list-detail\list-collection\list-collection.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\list\list-detail\list-detail.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\list\list-detail\list-filter\list-filter.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\list\list.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\shared\policy-list-dialog\policy-list-dialog.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\components\shared\policy-list-dialog\policy-list\policy-list.component.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\containers\manager.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\policy.module.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\viewmodels\client-list-collection-view-model.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\viewmodels\client-list-detail-view-model.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\viewmodels\client-list-general-view-model.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\viewmodels\index.ts" />
+    <None Remove="ClientApp\src\app\modules\policy\viewmodels\policy-list-view-model.ts" />
+    <None Remove="ClientApp\src\app\modules\security\components\login\login.component.ts" />
+    <None Remove="ClientApp\src\app\modules\security\containers\manager.ts" />
+    <None Remove="ClientApp\src\app\modules\security\security.module.ts" />
+    <None Remove="ClientApp\src\app\modules\security\viewmodels\index.ts" />
+    <None Remove="ClientApp\src\app\modules\security\viewmodels\login-view-model.ts" />
+    <None Remove="ClientApp\src\app\routes.ts" />
+    <None Remove="ClientApp\src\app\services\auth-user.service.ts" />
+    <None Remove="ClientApp\src\app\services\authentication.service.ts" />
+    <None Remove="ClientApp\src\app\services\form.service.ts" />
+    <None Remove="ClientApp\src\app\services\index.ts" />
+    <None Remove="ClientApp\src\app\services\policy.service.ts" />
+    <None Remove="ClientApp\src\app\services\security-guard.service.ts" />
+    <None Remove="ClientApp\src\app\services\security.service.ts" />
+    <None Remove="ClientApp\src\app\services\storage.service.ts" />
+    <None Remove="ClientApp\src\app\shared\common-shared\common-shared.module.ts" />
+    <None Remove="ClientApp\src\app\shared\custom-controls\custom-form-validators.ts" />
+    <None Remove="ClientApp\src\app\shared\material\index.ts" />
+    <None Remove="ClientApp\src\app\shared\material\material.module.ts" />
+    <None Remove="ClientApp\src\app\shared\spanish-paginator-intl.ts" />
+    <None Remove="ClientApp\src\app\shared\utils.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\modules\core\viewmodels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\agents\core\base-response-dto.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\core\base-response.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\networkmanager\auth-interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\networkmanager\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\networkmanager\network-manager.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\networkmanager\post-parameters.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\path-operation.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\policy-agent.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\request\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\request\list-clients-request.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\request\list-policies-by-client-id-request.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\response\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\response\list-clients-response.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\policy\response\list-policies-by-client-id-response.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\path-operation.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\request\connect-token-request.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\request\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\response\connect-token-response.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\response\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\agents\security\security-agent.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\adapters\client-adapter.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\adapters\policy-adapter.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\dtos\client-paged-list.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\dtos\client.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\dtos\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\dtos\policy.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\models\user.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\core\components\layout\layout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\core\components\navtoolbar\navtoolbar.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\core\components\viewport.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\core\containers\app.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\core\core.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\list\list-detail\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\list\list-detail\list-collection\list-collection.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\list\list-detail\list-detail.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\list\list-detail\list-filter\list-filter.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\list\list.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\shared\policy-list-dialog\policy-list-dialog.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\components\shared\policy-list-dialog\policy-list\policy-list.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\containers\manager.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\policy.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\viewmodels\client-list-collection-view-model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\viewmodels\client-list-detail-view-model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\viewmodels\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\policy\viewmodels\policy-list-view-model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\security\components\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\security\containers\manager.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\security\security.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\security\viewmodels\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\security\viewmodels\login-view-model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\routes.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\auth-user.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\authentication.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\form.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\policy.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\security-guard.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\security.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\storage.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\common-shared\common-shared.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\custom-controls\custom-form-validators.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\material\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\material\material.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\spanish-paginator-intl.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\utils.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

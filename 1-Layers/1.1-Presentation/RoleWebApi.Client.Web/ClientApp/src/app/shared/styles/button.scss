@@ -1,0 +1,24 @@
+@import "_vars.scss";
+
+.mat-raised-button {
+  font-family: MuseoSans300;
+  font-weight: 300;
+  font-style: normal;
+  font-size: $tamanio-letra;
+}
+
+.mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  color: white;
+}
+
+.button-circle {
+  display: block;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 50px;
+  height: 55px;
+  width: 55px;
+  min-width: 55px;
+  line-height: 55px;
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+<div class="policy-container">
+  <div class="policy-loading-shade"
+       *ngIf="ClientListDetailVM.isLoadingResults">
+    <mat-spinner *ngIf="ClientListDetailVM.isLoadingResults"></mat-spinner>
+  </div>
+  <div class="policy-table-container" #tableComponent>
+    <table mat-table class="policy-table" #table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef class="list-column-header-component column-5"> Visualize </th>
+        <td mat-cell *matCellDef="let client" class="list-column-component column-5">
+          <div class="pad-LR-10">
+            <button mat-icon-button md-svg-icon="arrow-up-bold-circle" matTooltip="Visualize" (click)="visualize.emit(client)">
+              <mat-icon svgIcon="edit" class="policy-button-action-icon"></mat-icon>
+            </button>
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="list-column-header-component column-25 th-text-overflow"> Id </th>
+        <td mat-cell *matCellDef="let client" class="list-column-component column-25"><div class="pad-LR-10 word-wrap"> {{client.Id}}</div> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="list-column-header-component column-30 th-text-overflow"> Name </th>
+        <td mat-cell *matCellDef="let client" class="list-column-component column-30"><div class="pad-LR-10 word-wrap"> {{client.Name}}</div> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef class="list-column-header-component column-25 th-text-overflow"> Email </th>
+        <td mat-cell *matCellDef="let client" class="list-column-component column-25"><div class="pad-LR-10 word-wrap"> {{client.Email}}</div> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef class="list-column-header-component column-15 th-text-overflow"> Role </th>
+        <td mat-cell *matCellDef="let client" class="list-column-component column-15"><div class="pad-LR-10 word-wrap"> {{client.Role}}</div> </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <mat-paginator #paginator
+                 [pageSize]="5"
+                 [pageSizeOptions]="[5, 10, 20, 30]"
+                 [showFirstLastButtons]="true"
+                 (page)="updatePaginatorValues($event)">
+  </mat-paginator>
+</div>

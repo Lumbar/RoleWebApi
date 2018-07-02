@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="mui-col-md-2 datos-form">
+    <div class="form-contenido">
+      <mat-card>
+        <div class="mui-panel">
+          <mat-card-title class="subtitle">Login</mat-card-title>
+          <br />
+          <form [formGroup]="loginForm" class="form" novalidate>
+            <div class="position-middle-center">
+              <div class="row">
+                <div class="login-column-icon pad-top-15">
+                  <mat-icon>person</mat-icon>
+                </div>
+                <div class="login-column-text pad-left-10">
+                  <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="username" name="username" autocomplete="off">
+                    <mat-error *ngIf="formErrors.username" class="form__error">{{ formErrors.username }}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- -----------------------------------------------Loading--------------------------------------------- -->
+          <div class="loading-shade" *ngIf="loading">
+            <mat-spinner *ngIf="loading" [color]="warn"></mat-spinner>
+          </div>
+          <div class="list-bulk-actions">
+            <button mat-mini-fab class="btn-enviar" [disabled]="loading" (click)="Login()"><mat-icon>arrow_forward</mat-icon></button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
