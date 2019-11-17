@@ -1,6 +1,9 @@
 ﻿namespace RoleWebApi.Application.Context.PolicyModule.Specifications
 {
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.ChangeTracking;
     using Newtonsoft.Json.Linq;
+    using RoleWebApi.Infrastructure.Data.Context;
     using RoleWebApi.Infrastructure.Data.Entity.Domain;
     using System;
     using System.Collections.Generic;
@@ -9,6 +12,38 @@
 
     public class PolicySpecification : IPolicySpecification
     {
+        private readonly IUnitOfWork<PolicyContext> _unitOfWork;
+
+        public PolicySpecification(IUnitOfWork<PolicyContext> unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public Policy GetPolicyFromDB(string policyId)
+        {
+            var query = from ta in _unitOfWork.DbContext.Policy
+                        where ta.Id == policyId
+                        select ta;
+
+            return query.FirstOrDefault();
+        }
+
+        public Policy InsertPolicy(Policy policy)
+        {
+            EntityEntry<Policy> result = _unitOfWork.DbContext.Policy.Add(policy);
+            _unitOfWork.SaveChanges();
+
+            return result.Entity;
+        }
+
+        public Policy UpdatePolicy(Policy policy)
+        {
+            EntityEntry<Policy> result = _unitOfWork.DbContext.Policy.Update(policy);
+
+            _unitOfWork.SaveChanges();
+            return result.Entity;
+        }
+
         public Client GetClientByPolicyId(string policyId)
         {
             Policy policy = ListPoliciesClient().FirstOrDefault(q => q.Id == policyId);
